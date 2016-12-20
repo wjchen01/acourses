@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+	<wicket:extend>
+	
+	<div class="row-fluid">
+	
+		<!-- Navbar -->
+		<nav class="navbar navbar-default" wicket:id="navbar-container">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="brand" href="#" >
+						<b><span wicket:id="project-title-label"></span></b>
+					</a>
+				</div>
+				
+				<a class="btn btn-primary navbar-btn pull-right" wicket:id="project-logout">Sign Out</a>
+			</div><!-- /.container-fluid -->
+		</nav>
+		
+		<!-- Feedback messages panel -->
+		<div wicket:id="feedback-panel">[Feedback Panel]</div>
+		
+		<!-- Search panel -->
+		<div class="panel panel-default" wicket:id="search-container">
+  			<div class="panel-heading">
+    			<b><span class="panel-title" wicket:id="search-instruction">[Search Instruction]</span></b>
+  			</div>
+  			<div class="panel-body">
+				<form class="form" wicket:id="search-course-form" name="searchForm">
+					<div class="form-group">
+						<label class="control-label" for="search-instructor-textfield" wicket:id="search-instructor-label">
+							[Uni/Last Name]
+						</label>
+						<input wicket:id="search-instructor-textfield" id="search-instructor-textfield" placeholder="Uni/Last Name"/>
+						<label class="control-label" for="search-course-id-textfield" wicket:id="search-course-id-label">
+							[Course Id/Title]
+						</label>
+						<input wicket:id="search-course-id-textfield" id="search-course-id-textfield" placeholder="Course Id/Title" />
+						<button wicket:id="search-submit" type="submit" class="btn" id="search-btn">Search</button>
+					</div>
+				</form>
+  			</div>
+		</div>
+			
+		<!-- Search Result -->
+		<div class="panel panel-default" wicket:id="data-container">
+			<div class="panel-body">
+				<div class="tab-content" wicket:id="data-view-tabs" >[tabbed panel will be here]</div>
+			</div>			
+		</div>
+		
+	</div> <!-- /.row-fluid/ -->
+	</wicket:extend>
+
+</body>
+</html>

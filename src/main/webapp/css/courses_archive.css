@@ -1,0 +1,200 @@
+.myCoursesContentBody h4 {
+    font-size: 16.5px;
+}
+
+.myCoursesContentBody h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-family: Trajan Pro;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 10px 0;
+    text-rendering: optimizelegibility;
+}
+
+.myCoursesContentBody .div.hidden {
+	display: none;	
+}
+
+.myCoursesContentBody .listHier {
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+}
+
+.myCoursesContentBody .listData thead tr.course-site-header th {
+    background-color: #6aa8dd;
+    color: #ffffff;
+    font-size: 1.15em;
+    font-weight: bolder;
+}
+
+.myCoursesContentBody .listData th {
+    background-color: #ffffff;
+    border: medium none;
+    font-weight: normal;
+    padding: 0.5em;
+    text-align: left;
+    white-space: nowrap;
+}
+
+/* .myCoursesContentBody table,
+.myCoursesContentBody .listHier,
+.myCoursesContentBody .listHier a {
+ color: #4D4D4F;
+} */
+
+.myCoursesContentBody .listHier a {
+    text-decoration: none;
+}
+
+/* .myCoursesContentBody .listHier a:hover {
+	color: #0099CC;
+    text-decoration: underline;
+} */
+
+.myCoursesContentBody .listHier th {
+	background-color: #FFFFFF;
+	border: none;
+}
+
+.myCoursesContentBody .listHier thead th span {
+    font-weight: bolder;
+	font-size: 1.05em;
+}
+
+.myCoursesContentBody .listHier tbody td {
+	border-top: 1px solid #D3D6D8;
+}
+
+.myCoursesContentBody .listHier tfoot th {
+	font-size: 0.55em
+}
+
+.myCoursesContentBody .listHier thead tr.course-site-header th {
+    font-weight: bolder;
+    font-size: 1.15em;
+	color: #FFFFFF;
+	background-color: #6AA8DD;
+}
+
+.myCoursesContentBody .listHier tfoot th {
+	color: #FFFFFF;
+	background-color: #6AA8DD;
+}
+
+.myCoursesContentBody .listHier thead tr.course-table-header {
+	height: 30px;
+    vertical-align: bottom;
+}
+
+.myCoursesContentBody tr.even {
+	background-color: #FFFFFF;
+}
+
+.myCoursesContentBody tr.odd {
+	background-color: #E7F5FE;
+}
+
+.myCoursesContentBody tr.sisYear {
+	background-color: #EFEFEF;
+}
+
+.myCoursesContentBody tr.sisYear span.collapse {
+	background: transparent url('../img/expand.gif') no-repeat scroll 0px 2px;
+	padding-left: 15px;
+}
+
+.myCoursesContentBody tr.sisYear span.expand {
+	background: transparent url('../img/collapse.gif') no-repeat scroll 0px 2px;
+	padding-left: 15px;
+}
+
+.myCoursesContentBody h3 {
+	color: #081C81;
+	font-weight: normal;
+}
+
+.myCoursesContentBody p {
+	font-family: Verdana, Verdana, Geneva, sans-serif;
+	font-size: 0.9em;
+}
+
+.myCoursesContentBody .cu-my-courses-child2 {
+	padding-right: 10px;
+	border-right: 2px solid #DDDDDD;
+}
+
+.myCoursesContentBody .course-site-header-inc {
+	padding-bottom: 5px;
+}
+
+.myCoursesContentBody h3.error-heading {
+    font-size: 2em;
+    color: orange;
+}
+
+.myCoursesContentBody p.error-content {
+    font-size: 1.5em;
+}
+
+.myCoursesContentBody .listHier pre {
+	font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+	font-size: 1em;
+    margin: 0;
+}
+
+.myCoursesContentBody .listHier thead tr.course-portfolio-table-header {
+	height: 45px;
+    vertical-align: bottom;
+}
+
+.myCoursesContentBody div.tabpanel div.tab-row li {
+	margin: 0;
+	padding: 0;
+	display: inline;
+	list-style-type: none;
+}
+
+.myCoursesContentBody div.tabpanel div.tab-row a:link,div.tabpanel div.tab-row a:visited {
+/* 	float: left; */
+	background: #f3f3f3;
+	font-size: 18px;
+	line-height: 14px;
+	font-weight: bold;
+	padding: 2px 10px 2px 10px;
+	/* margin-right: 4px; */
+	border: 1px solid #ccc;
+	text-decoration: none;
+/* 	color: #666; */
+}
+
+.myCoursesContentBody div.tabpanel div.tab-row li.selected a:link,div.tabpanel div.tab-row a:visited.active	{
+	border-bottom: 1px solid #fff;
+	background: #fff;
+	color: #000;
+}
+
+.myCoursesContentBody div.tabpanel div.tab-row a:hover {
+	background: #fff;
+}
+
+/* course id link disable */
+.myCoursesContentBody .listHier a.course_id {
+	color: #4d4d4f;
+	text-decoration: none;
+}
+
+.myCoursesContentBody .listHier a.course_id:link {
+	text-decoration: none;
+}
+
+.myCoursesContentBody .listHier a.course_id:visited {
+	text-decoration: none;
+}
+
+.myCoursesContentBody .listHier a.course_id:active {
+	text-decoration: none;
+}
+
+.myCoursesContentBody .listHier a.course_id:hover {
+	text-decoration: none;
+	background-color: transparent;	
+}

@@ -1,0 +1,9 @@
+/target/
+.classpath
+.project
+.settings/
+/WEB-INF/*
+consumersecrets.properties
+hibernate.properties
+log4j.properties
+web.xml

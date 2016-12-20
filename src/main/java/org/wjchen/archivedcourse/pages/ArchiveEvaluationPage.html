@@ -1,0 +1,46 @@
+<html xmlns:wicket="http://wicket.apache.org" lang="en">
+<body class="myCoursesContentBody">
+		<table class="table table-striped">
+			<thead>
+				<tr class="course-table-header">
+					<th style="table-layout: fixed; width: 60%">
+						<span wicket:id="header-eval-title-label">[Evaluation Title]</span>
+					</th>
+					<th style="table-layout: fixed; width: 10%">
+						<span wicket:id="header-eval-format-label">[Format]</span>
+					</th>
+					<th style="table-layout: fixed; width: 10%">
+						<span wicket:id="header-eval-type-label">[Type]</span>
+					</th>
+					<th style="table-layout: fixed; width: 10%">
+						<span wicket:id="header-eval-uni-label">[Type]</span>
+					</th>
+					<th style="table-layout: fixed; width: 10%">
+						<span wicket:id="header-eval-link-label">[Link]</span>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr wicket:id="table-archived-reports">
+					<td>
+						<span wicket:id="item-eval-report-title">[Evaluation Title]</span>
+					</td>
+					<td>
+						<span wicket:id="item-eval-report-format">[Format]</span>
+					</td>
+					<td>
+						<span wicket:id="item-eval-report-type">[Type]</span>
+					</td>
+					<td>
+						<span wicket:id="item-eval-report-uni">[UNI]</span>
+					</td>
+					<td>
+						<a wicket:id="item-eval-report-url" target="_parent"> 
+							<span wicket:id="item-eval-report-link">[Link]</span>
+						</a> 
+					</td>					
+				</tr>
+			</tbody>
+		</table>
+</body>
+</html>

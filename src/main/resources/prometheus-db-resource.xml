@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<import resource="db-properties.xml"/>
+	
+	<!-- Course Archive Properties -->
+	<bean id="org.wjchen.prometheus.DbHibernateProperties"
+		class="org.springframework.beans.factory.config.PropertiesFactoryBean"
+		lazy-init="true" depends-on="org.wjchen.archivedcourse.DbPropertyConfigurer">
+		<property name="properties">
+			<props>
+				<prop key="hibernate.dialect">${prometheus.hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.query.substitutions">true 1, false 0, yes 'Y', no 'N'</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.jdbc.use_streams_for_binary">true</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+				<prop key="hibernate.cache.provider_class">${hibernate.cache.provider_class}</prop>			
+			</props>
+		</property>
+	</bean>
+		
+
+    <bean id="org.wjchen.prometheus.DbDataSource"
+        class="org.apache.commons.dbcp.BasicDataSource">
+        <property name="driverClassName">
+            <value>${prometheus.driverClassName}</value>
+        </property>
+        <property name="url">
+            <value>${prometheus.DataSource}</value>
+        </property>
+        <property name="username">
+            <value>${prometheus.username}</value>
+        </property>
+        <property name="password">
+            <value>${prometheus.password}</value>
+        </property>
+    </bean>
+    
+	<!-- Session Factory --> 
+	<bean id="org.wjchen.prometheus.SessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="packagesToScan" value="org.wjchen.prometheus.models"/>
+		<property name="hibernateProperties" ref="org.wjchen.prometheus.DbHibernateProperties"/>
+		<property name="dataSource" ref="org.wjchen.prometheus.DbDataSource"/>
+	</bean>
+		
+	<!-- Transaction Manager --> 
+	<bean id="org.wjchen.prometheus.TransactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+		lazy-init="true">
+		<property name="sessionFactory" ref="org.wjchen.prometheus.SessionFactory" />
+		<qualifier value="prometheus" type="org.springframework.beans.factory.annotation.Qualifier" />
+	</bean>
+	
+</beans>
